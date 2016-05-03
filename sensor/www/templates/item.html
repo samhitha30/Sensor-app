@@ -1,0 +1,54 @@
+<!--ion-view style="" id="page3" title="values">
+    <ion-content class="has-header" overflow-scroll="true" padding="true">
+        <form style="" class="list">
+             
+                <span class="input-label">Sensors</span>
+                <label class="item item-input">
+                <input type="text" ng-model="inputForm.sensorname" placeholder="sensorname">
+            </label>
+<label class="item item-input">
+                <input type="number" ng-model="inputForm.value" placeholder="value">
+            </label>
+                <input placeholder="" type="text">
+            </label>
+        </form>
+        <a class="button button-positive  button-block" ng-click="save(inputForm.sensorname, inputForm.value)" id="values-button3" ui-sref="sensors">submit</a>
+    </ion-content>
+</ion-view-->
+
+
+<ion-view title="Sensors">
+    <ion-nav-buttons side="left">
+        <button class="left button button-icon icon ion-arrow-left-c" ng-click="back()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="list">
+            <label class="item item-input">
+                <input type="text" ng-model="inputForm.sensorname" placeholder="sensorname">
+            </label>
+<label class="item item-input">
+                <input type="text" ng-model="inputForm.Description" placeholder="Description">
+            </label>
+<label class="item item-input">
+                <input type="text" ng-model="inputForm.sensorType" placeholder="sensorType">
+            </label>
+            <label class="item item-input">
+                <input type="text" ng-model="inputForm.value" placeholder="value">
+            </label>
+
+<label class="item item-input">
+                <input type="text" ng-model="inputForm.sensorReading" placeholder="sensorReading">
+            </label>
+        </div>
+        <div class="padding">
+            <button class="button button-block button-positive" ng-click="save(inputForm.sensorname, inputForm.Description,inputForm.sensorType,inputForm.value,inputForm.sensorReading)">
+                Save
+            </button>
+        </div>
+    </ion-content>
+</ion-view>
+           
+
+
+
+

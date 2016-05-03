@@ -1,0 +1,25 @@
+<ion-view style=""  title="Login">
+    <ion-content class="has-header" overflow-scroll="true" padding="true">
+        <form style="" class="list">
+            <ion-list style="">
+                <label style="" class="item item-input">
+                    <span class="input-label" ng-model="user.username" >Username</span>
+                    <input placeholder="" type="text">
+                </label>
+                <label style="" class="item item-input">
+                    <span class="input-label"  ng-model="user.password">Password</span>
+                    <input placeholder="" type="password">
+                </label>
+            </ion-list>
+            <div style="height: 40px;" class="spacer"></div>
+            <a class="button button-stable  button-block" id="login-button1" ng-click="login(user);" ui-sref="list">Log in</a>
+            <a class="button button-positive  button-block button-clear" id="login-button2" onclick="window.open('/signup', '_system', 'location=yes'); return false;" href="#">Or create an account here </a>
+        </form>
+
+<div class="row  padding removePM">
+	  <div class="col"> <a class=" button-positive button button-block" ng-click="facebookSignIn()"><i class="icon ion-social-facebook"></i></a> </div>
+	  <div class="col"> <a class="button-calm button button-block" ng-click="twitterSignIn()"><i class="icon ion-social-twitter"></i></a> </div>
+	</div>
+
+    </ion-content>
+</ion-view>

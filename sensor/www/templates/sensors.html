@@ -1,0 +1,34 @@
+<!--ion-view style="" id="page1" title="sensors">
+<ion-nav-buttons side="right">
+        <button class="right button button-icon icon ion-plus" ui-sref="values"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header" overflow-scroll="true" padding="true">
+        <!--ion-list style="">
+            <ion-item style="" ui-sref="values">Co2</ion-item>
+            <ion-item style="" ui-sref="values">o2</ion-item>
+            <ion-item style="" ui-sref="values">temperature</ion-item>
+            <ion-item style="" ui-sref="values">pressure</ion-item>
+        </ion-list>
+ <ion-sensors show-delete="false" can-swipe="true">
+            <ion-values ng-repeat="(key, value) in valuess" ui-sref="values({documentId: key, documentRevision: value._rev})">
+                {{value.sensorname}} 
+                <ion-option-button class="button-assertive icon ion-trash-a" ng-click="delete(key, value._rev)"></ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view-->
+
+
+<ion-view title="Sensors">
+    <ion-nav-buttons side="right">
+        <button class="right button button-icon icon ion-plus" ui-sref="item"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-list show-delete="false" can-swipe="true">
+            <ion-item ng-repeat="(key, value) in items" ui-sref="item({documentId: key, documentRevision: value._rev})">
+                {{value.sensorname}} 
+                <ion-option-button class="button-assertive icon ion-trash-a" ng-click="delete(key, value._rev)"></ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
